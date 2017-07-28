@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+    <record model="ir.ui.view" id="motiv_colors_inherit">
+      <field name="name">x_jos.web_enterprise.less_helpers.mod</field>
+      <field name="inherit_id" ref="web_enterprise.less_helpers"/>
+      <field name="priority">99</field>
+      <field name="arch" type="xml">
+        <data>
+          <xpath expr="//link[@href='/web_enterprise/static/src/less/variables.less']" position="replace">
+              <link rel="stylesheet" type="text/less" href="/background_mss_ps/static/src/less/variables2.less"/>
+          </xpath>
+        </data>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="motiv_background_inherit">
+      <field name="name">x_jos.web_enterprise.assets_backend.mod</field>
+      <field name="inherit_id" ref="web_enterprise.assets_backend"/>
+      <field name="priority">99</field>
+      <field name="arch" type="xml">
+        <data>
+          <xpath expr="//link[@href='/web_enterprise/static/src/less/app_switcher.less']" position="replace">
+               <link rel="stylesheet" type="text/less" href="/background_mss_ps/static/src/less/app_switcher2.less"/>
+          </xpath>
+        </data>
+      </field>
+    </record>
+</odoo>
